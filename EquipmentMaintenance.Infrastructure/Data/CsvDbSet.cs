@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace EquipmentMaintenance.Infrastructure.Data
 {
-    internal class CsvDbSet<T>
+    public class CsvDbSet<T>
     {
         public IList<T> List { get; set; }
 

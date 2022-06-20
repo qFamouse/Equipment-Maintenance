@@ -8,6 +8,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquipmentMaintenance.Core", "EquipmentMaintenance.Core\EquipmentMaintenance.Core.csproj", "{9B088922-CC98-4668-86EA-540F5807314A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquipmentMaintenance.Infrastructure", "EquipmentMaintenance.Infrastructure\EquipmentMaintenance.Infrastructure.csproj", "{4A48A623-29B0-4683-8EF5-67CB4549B6FC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9B088922-CC98-4668-86EA-540F5807314A} = {9B088922-CC98-4668-86EA-540F5807314A}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
