@@ -13,11 +13,11 @@ namespace EquipmentMaintenance.Infrastructure.Data
         public CsvDbSet<Maintenance> Maintenances { get; set; }
         public CsvDbSet<MaintenanceType> MaintenanceTypes { get; set; }
 
-        public EquipmentMaintenanceContext(string equipmentsPath, string maintenancesPath, string MaintenanceTypesPath)
+        public EquipmentMaintenanceContext()
         {
-            Equipments = new CsvDbSet<Equipment>(equipmentsPath);
-            Maintenances = new CsvDbSet<Maintenance>(maintenancesPath);
-            MaintenanceTypes = new CsvDbSet<MaintenanceType>(MaintenanceTypesPath);
+            Equipments = new CsvDbSet<Equipment>("equipments.csv");
+            Maintenances = new CsvDbSet<Maintenance>("maintenances.csv");
+            MaintenanceTypes = new CsvDbSet<MaintenanceType>("maintenance_types.csv");
         }
     }
 }
