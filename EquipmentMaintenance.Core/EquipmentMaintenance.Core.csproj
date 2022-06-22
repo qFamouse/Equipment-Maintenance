@@ -47,9 +47,16 @@
     <Compile Include="Interfaces\Entities\IEntity.cs" />
     <Compile Include="Interfaces\Repositories\IBaseRepository.cs" />
     <Compile Include="Interfaces\Repositories\IEquipmentRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IMaintenanceRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IMaintenanceTypeRepository.cs" />
+    <Compile Include="Interfaces\Services\IBaseService.cs" />
     <Compile Include="Interfaces\Services\IEquipmentService.cs" />
+    <Compile Include="Interfaces\Services\IMaintenanceService.cs" />
+    <Compile Include="Interfaces\Services\IMaintenanceTypeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\EquipmentService.cs" />
+    <Compile Include="Services\MaintenanceService.cs" />
+    <Compile Include="Services\MaintenanceTypeService.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

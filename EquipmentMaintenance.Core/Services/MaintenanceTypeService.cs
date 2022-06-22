@@ -9,31 +9,31 @@ using System.Threading.Tasks;
 
 namespace EquipmentMaintenance.Core.Services
 {
-    public class EquipmentService : IEquipmentService
+    internal class MaintenanceTypeService : IMaintenanceTypeService
     {
-        private readonly IEquipmentRepository equipmentRepository;
+        private readonly IMaintenanceTypeRepository maintenanceTypeRepository;
 
-        public EquipmentService(IEquipmentRepository equipmentRepository)
+        public MaintenanceTypeService(IMaintenanceTypeRepository maintenanceTypeRepository)
         {
-            this.equipmentRepository = equipmentRepository;
-        }
-            
-        public void Add(Equipment item)
-        {
-            throw new NotImplementedException();
+            this.maintenanceTypeRepository = maintenanceTypeRepository;
         }
 
-        public List<Equipment> Find(Predicate<Equipment> predicate)
+        public void Add(MaintenanceType item)
         {
             throw new NotImplementedException();
         }
 
-        public List<Equipment> GetAll()
+        public List<MaintenanceType> Find(Predicate<MaintenanceType> predicate)
         {
             throw new NotImplementedException();
         }
 
-        public Equipment GetById()
+        public List<MaintenanceType> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public MaintenanceType GetById()
         {
             throw new NotImplementedException();
         }
