@@ -10,9 +10,9 @@ namespace EquipmentMaintenance.Core.Interfaces.Services
     public interface IBaseService<T>
     {
         List<T> GetAll();
-        T GetById();
-        void Add(T item);
-        void Remove(int id);
+        void Add(T entity);
+        void Remove(T entity);
         List<T> Find(Predicate<T> predicate);
+        void Update();
     }
 }
