@@ -1,4 +1,5 @@
 ﻿using EquipmentMaintenance.Core.Entities;
+using EquipmentMaintenance.Core.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,5 @@ namespace EquipmentMaintenance.Core.Interfaces.Services
 {
     public interface IEquipmentService : IBaseService<Equipment>
     {
-
     }
 }

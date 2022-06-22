@@ -1,6 +1,7 @@
 ﻿using EquipmentMaintenance.Core.Entities;
 using EquipmentMaintenance.Core.Interfaces.Repositories;
 using EquipmentMaintenance.Core.Interfaces.Services;
+using EquipmentMaintenance.Core.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,17 @@ namespace EquipmentMaintenance.Core.Services
             
         public void Add(Equipment item)
         {
-            throw new NotImplementedException();
+            equipmentRepository.Add(item);
+            equipmentRepository.SaveChanges();
+        }
+
+        public void EditById(int id, EquipmentEditRequest request)
+        {
+            var equipment = equipmentRepository.GetById(id);
+            equipment.Name = request.Name;
+            equipment.Department = request.Department;
+
+            equipmentRepository.SaveChanges();
         }
 
         public List<Equipment> Find(Predicate<Equipment> predicate)
@@ -30,17 +41,18 @@ namespace EquipmentMaintenance.Core.Services
 
         public List<Equipment> GetAll()
         {
-            throw new NotImplementedException();
+            return equipmentRepository.GetAll();
         }
 
-        public Equipment GetById()
+        public void Remove(Equipment equipment)
         {
-            throw new NotImplementedException();
+            equipmentRepository.Remove(equipment);
+            equipmentRepository.SaveChanges();
         }
 
-        public void Remove(int id)
+        public void Update()
         {
-            throw new NotImplementedException();
+            equipmentRepository.SaveChanges();
         }
     }
 }
