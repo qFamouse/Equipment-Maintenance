@@ -7,8 +7,12 @@ using System.Threading.Tasks;
 
 namespace EquipmentMaintenance.Core.Interfaces.Services
 {
-    public interface IEquipmentService : IBaseService<Equipment>
+    public interface IBaseService<T>
     {
-
+        List<T> GetAll();
+        T GetById();
+        void Add(T item);
+        void Remove(int id);
+        List<T> Find(Predicate<T> predicate);
     }
 }

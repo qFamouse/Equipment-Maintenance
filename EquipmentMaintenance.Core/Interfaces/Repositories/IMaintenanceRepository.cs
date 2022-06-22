@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EquipmentMaintenance.Core.Interfaces.Services
+namespace EquipmentMaintenance.Core.Interfaces.Repositories
 {
-    public interface IEquipmentService : IBaseService<Equipment>
+    public interface IMaintenanceRepository : IBaseRepository<Maintenance>
     {
-
     }
 }

@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace EquipmentMaintenance.Core.Interfaces.Services
 {
-    public interface IEquipmentService : IBaseService<Equipment>
+    public interface IMaintenanceTypeService : IBaseService<MaintenanceType>
     {
-
-    }
+    };
 }
