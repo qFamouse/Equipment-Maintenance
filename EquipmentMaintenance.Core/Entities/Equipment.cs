@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 
 namespace EquipmentMaintenance.Core.Entities
 {
-    public class Equipment : IEntity
+    public class Equipment : IEntity, ICloneable
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Department { get; set; }
+
+        public object Clone() => MemberwiseClone();
     }
 }
