@@ -4,6 +4,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.2.32408.312
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquipmentMaintenance.UI", "EquipmentMaintenance.UI\EquipmentMaintenance.UI.csproj", "{0DCC5D75-B413-45BB-A715-514C60A9F19C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4A48A623-29B0-4683-8EF5-67CB4549B6FC} = {4A48A623-29B0-4683-8EF5-67CB4549B6FC}
+		{9B088922-CC98-4668-86EA-540F5807314A} = {9B088922-CC98-4668-86EA-540F5807314A}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquipmentMaintenance.Core", "EquipmentMaintenance.Core\EquipmentMaintenance.Core.csproj", "{9B088922-CC98-4668-86EA-540F5807314A}"
 EndProject

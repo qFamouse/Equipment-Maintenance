@@ -94,5 +94,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EquipmentMaintenance.Core\EquipmentMaintenance.Core.csproj">
+      <Project>{9B088922-CC98-4668-86EA-540F5807314A}</Project>
+      <Name>EquipmentMaintenance.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EquipmentMaintenance.Infrastructure\EquipmentMaintenance.Infrastructure.csproj">
+      <Project>{4A48A623-29B0-4683-8EF5-67CB4549B6FC}</Project>
+      <Name>EquipmentMaintenance.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
