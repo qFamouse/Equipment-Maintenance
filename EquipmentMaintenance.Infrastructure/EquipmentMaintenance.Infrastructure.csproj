@@ -68,6 +68,8 @@
   <ItemGroup>
     <Compile Include="Data\CsvDbSet.cs" />
     <Compile Include="Data\EquipmentMaintenanceContext.cs" />
+    <Compile Include="Data\Repositories\BaseRepository.cs" />
+    <Compile Include="Data\Repositories\EquipmentRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
