@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace EquipmentMaintenance.Core.Services
 {
-    internal class MaintenanceTypeService : IMaintenanceTypeService
+    public class MaintenanceTypeService : IMaintenanceTypeService
     {
         private readonly IMaintenanceTypeRepository maintenanceTypeRepository;
 
