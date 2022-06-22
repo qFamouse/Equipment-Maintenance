@@ -25,15 +25,23 @@ namespace EquipmentMaintenance.Infrastructure.Data.Repositories
             return CurrentDbSet.ToList();
         }
 
-        public bool Insert(T equipment)
+        public void Add(T equipment)
         {
             CurrentDbSet.Add(equipment);
-
-            return true;
         }
 
         public void SaveChanges() => CurrentDbSet.SaveChanges();
 
         public async Task SaveChangesAcync() => await CurrentDbSet.SaveChangesAcync();
+
+        public T GetById(int id)
+        {
+            return CurrentDbSet.ToList().Find(i => i.Id == id);
+        }
+
+        public void Remove(T entity)
+        {
+            CurrentDbSet.Remove(entity);
+        }
     }
 }

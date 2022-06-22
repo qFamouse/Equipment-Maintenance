@@ -9,6 +9,9 @@ namespace EquipmentMaintenance.Core.Interfaces.Repositories
     public interface IBaseRepository<T>
     {
         List<T> GetAll();
-        bool Insert(T entity);
+        T GetById(int id);
+        void Add(T entity);
+        void SaveChanges();
+        void Remove(T entity);
     }
 }
