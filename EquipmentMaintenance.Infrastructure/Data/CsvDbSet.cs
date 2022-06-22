@@ -86,7 +86,7 @@ namespace EquipmentMaintenance.Infrastructure.Data
         public void Add(T item)
         {
             item.Id = _id++;
-            List.Add( item);
+            List.Add(item);
         }
 
         public void Clear() => List.Clear();
