@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace EquipmentMaintenance.Infrastructure.Data.Repositories
 {
-    public class EquipmentRepository : BaseRepository<Equipment>, IEquipmentRepository 
+    public class MaintenanceTypeRepository : BaseRepository<MaintenanceType>, IMaintenanceTypeRepository
     {
-        public EquipmentRepository(EquipmentMaintenanceContext dbContext) : base(dbContext, dbContext.Equipments) { }
+        public MaintenanceTypeRepository(EquipmentMaintenanceContext dbContext) : base(dbContext, dbContext.MaintenanceTypes) { }
     }
 }

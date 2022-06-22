@@ -70,6 +70,8 @@
     <Compile Include="Data\EquipmentMaintenanceContext.cs" />
     <Compile Include="Data\Repositories\BaseRepository.cs" />
     <Compile Include="Data\Repositories\EquipmentRepository.cs" />
+    <Compile Include="Data\Repositories\MaintenanceTypeRepository.cs" />
+    <Compile Include="Data\Repositories\MaintenanceRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
