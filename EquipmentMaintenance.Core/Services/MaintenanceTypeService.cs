@@ -34,6 +34,12 @@ namespace EquipmentMaintenance.Core.Services
             {
                 maintenanceTypeRepository.Add(item);
             }
+            else
+            {
+                item.MaintenanceId = maintenanceRepository.GetAll()[0].Id;
+                item.EquipmentId = equipmentRepository.GetAll()[0].Id;
+                maintenanceTypeRepository.Add(item);
+            }
 
             maintenanceTypeRepository.SaveChanges();
         }
