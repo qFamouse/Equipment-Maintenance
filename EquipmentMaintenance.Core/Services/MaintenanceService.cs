@@ -11,16 +11,17 @@ namespace EquipmentMaintenance.Core.Services
 {
     public class MaintenanceService : IMaintenanceService
     {
-        private readonly IMaintenanceService maintenanceService;
+        private readonly IMaintenanceRepository maintenanceRepository;
 
-        public MaintenanceService(IMaintenanceService maintenanceService)
+        public MaintenanceService(IMaintenanceRepository maintenanceRepository)
         {
-            this.maintenanceService = maintenanceService;
+            this.maintenanceRepository = maintenanceRepository;
         }
 
         public void Add(Maintenance item)
         {
-            throw new NotImplementedException();
+            maintenanceRepository.Add(item);
+            maintenanceRepository.SaveChanges();
         }
 
         public List<Maintenance> Find(Predicate<Maintenance> predicate)
@@ -30,17 +31,18 @@ namespace EquipmentMaintenance.Core.Services
 
         public List<Maintenance> GetAll()
         {
-            throw new NotImplementedException();
+            return maintenanceRepository.GetAll();
         }
 
-        public Maintenance GetById()
+        public void Remove(Maintenance entity)
         {
-            throw new NotImplementedException();
+            maintenanceRepository.Remove(entity);
+            maintenanceRepository.SaveChanges();
         }
 
-        public void Remove(int id)
+        public void Update()
         {
-            throw new NotImplementedException();
+            maintenanceRepository.SaveChanges();
         }
     }
 }
