@@ -9,6 +9,37 @@
         Title="MainWindow" Height="450" Width="800"
         DataContext="{local:DISource Type=viewmodels:MainViewModel}">
     <Grid>
-        
+        <TabControl>
+            <TabItem>
+                <TabItem.Header>Equipments</TabItem.Header>
+                <TabItem.Content>
+                    <Grid Background="Lavender">
+                        <DataGrid ItemsSource="{Binding Equipments, Mode=TwoWay}"
+                                  AutoGenerateColumns="True"
+                                  CurrentCellChanged="DataGrid_CurrentCellChanged"/>
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>Maintenances</TabItem.Header>
+                <TabItem.Content>
+                    <Grid Background="Lavender">
+                        <DataGrid ItemsSource="{Binding Maintenances, Mode=TwoWay}"
+                                  AutoGenerateColumns="True"
+                                  CurrentCellChanged="DataGrid_CurrentCellChanged"/>
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>Maintenance Types</TabItem.Header>
+                <TabItem.Content>
+                    <Grid Background="Lavender">
+                        <DataGrid ItemsSource="{Binding MaintenanceTypes, Mode=TwoWay}"
+                                  AutoGenerateColumns="True"
+                                  CurrentCellChanged="DataGrid_CurrentCellChanged"/>
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

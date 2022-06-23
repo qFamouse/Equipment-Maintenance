@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EquipmentMaintenance.Core.Entities;
+using EquipmentMaintenance.UI.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,18 @@ namespace EquipmentMaintenance.UI
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainViewModel mainViewModel;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            mainViewModel = (MainViewModel)DataContext;
+        }
+
+        private void DataGrid_CurrentCellChanged(object sender, EventArgs e)
+        {
+            mainViewModel.Update();
         }
     }
 }
