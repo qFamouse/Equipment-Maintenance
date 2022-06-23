@@ -12,15 +12,30 @@ namespace EquipmentMaintenance.Core.Services
     public class MaintenanceTypeService : IMaintenanceTypeService
     {
         private readonly IMaintenanceTypeRepository maintenanceTypeRepository;
+        private readonly IMaintenanceRepository maintenanceRepository;
+        private readonly IEquipmentRepository equipmentRepository;
 
-        public MaintenanceTypeService(IMaintenanceTypeRepository maintenanceTypeRepository)
+        public MaintenanceTypeService
+            (
+            IMaintenanceTypeRepository maintenanceTypeRepository,
+            IMaintenanceRepository maintenanceRepository,
+            IEquipmentRepository equipmentRepository
+            )
         {
             this.maintenanceTypeRepository = maintenanceTypeRepository;
+            this.maintenanceRepository = maintenanceRepository;
+            this.equipmentRepository = equipmentRepository;
         }
 
         public void Add(MaintenanceType item)
         {
-            throw new NotImplementedException();
+            if (maintenanceRepository.GetById(item.MaintenanceId) != null &&
+                equipmentRepository.GetById(item.EquipmentId) != null)
+            {
+                maintenanceTypeRepository.Add(item);
+            }
+
+            maintenanceTypeRepository.SaveChanges();
         }
 
         public List<MaintenanceType> Find(Predicate<MaintenanceType> predicate)
@@ -30,17 +45,18 @@ namespace EquipmentMaintenance.Core.Services
 
         public List<MaintenanceType> GetAll()
         {
-            throw new NotImplementedException();
+            return maintenanceTypeRepository.GetAll();
         }
 
-        public MaintenanceType GetById()
+        public void Remove(MaintenanceType entity)
         {
-            throw new NotImplementedException();
+            maintenanceTypeRepository.Remove(entity);
+            maintenanceTypeRepository.SaveChanges();
         }
 
-        public void Remove(int id)
+        public void Update()
         {
-            throw new NotImplementedException();
+            maintenanceTypeRepository.SaveChanges();
         }
     }
 }
