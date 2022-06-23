@@ -40,9 +40,13 @@ namespace EquipmentMaintenance.UI
 
             // Repositories //
             services.AddSingleton<IEquipmentRepository, EquipmentRepository>();
+            services.AddSingleton<IMaintenanceRepository, MaintenanceRepository>();
+            services.AddSingleton<IMaintenanceTypeRepository, MaintenanceTypeRepository>();
 
             // Services //
             services.AddSingleton<IEquipmentService, EquipmentService>();
+            services.AddSingleton<IMaintenanceService, MaintenanceService>();
+            services.AddSingleton<IMaintenanceTypeService, MaintenanceTypeService>();
 
             // Model-View-ViewModel //
             services.AddSingleton<MainViewModel>();
